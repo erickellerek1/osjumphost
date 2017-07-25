@@ -1,0 +1,18 @@
+[Unit]
+Description=jumphost vlan interface creation
+After=network.target
+
+[Service]
+Environment=LC_ALL=C.UTF-8
+Environment=LANG=C.UTF-8
+EnvironmentFile=-/etc/default/jumpost
+ExecStart=/usr/local/bin/setup.vlan.sh up
+ExecStop=/usr/local/bin/setup.vlan.sh down 
+Type=simple
+RemainAfterExit=yes
+KillSignal=SIGQUIT
+KillMode=process
+TimeoutStopSec=15s
+
+[Install]
+WantedBy=multi-user.target
