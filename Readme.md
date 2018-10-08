@@ -1,3 +1,4 @@
+# Repository was migrated to internal bitbucket. To get access please contact with Roche DevTools Support
 # Jump host helper service
 
 ## Rational
